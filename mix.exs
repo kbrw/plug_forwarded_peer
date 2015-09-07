@@ -23,6 +23,6 @@ defmodule PlugForwardedPeer.Mixfile do
   end
 
   defp deps do
-   [{:plug, "~> 0.13"}]
+   [{:plug, ">= 0.13.0 and < 2.0.0"}]
   end
 end
