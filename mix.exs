@@ -3,7 +3,7 @@ defmodule PlugForwardedPeer.Mixfile do
 
   def project do
     [app: :plug_forwarded_peer,
-     version: "0.0.2",
+     version: "0.0.3",
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -12,10 +12,10 @@ defmodule PlugForwardedPeer.Mixfile do
      to rfc7239 and fill `conn.remote_ip` with the root client ip.
      """,
      package: [links: %{"Source"=>"http://github.com/awetzel/plug_forwarded_peer"},
-               contributors: ["Arnaud Wetzel"],
+               contributors: ["Arnaud Wetzel", "Kiere El-Shafie"],
                licenses: ["MIT"],
                files: ["lib", "priv", "mix.exs", "README*", "templates", "LICENSE*"]],
-     deps: deps]
+     deps: deps()]
   end
 
   def application do
@@ -23,6 +23,6 @@ defmodule PlugForwardedPeer.Mixfile do
   end
 
   defp deps do
-   [{:plug, ">= 0.13.0 and < 2.0.0"}]
+   [{:plug, ">= 1.0.0 and < 2.0.0"}]
   end
 end
