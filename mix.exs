@@ -15,7 +15,7 @@ defmodule PlugForwardedPeer.Mixfile do
                contributors: ["Arnaud Wetzel"],
                licenses: ["MIT"],
                files: ["lib", "priv", "mix.exs", "README*", "templates", "LICENSE*"]],
-     deps: deps]
+     deps: deps()]
   end
 
   def application do
