@@ -12,3 +12,14 @@ defmodule MyPlug do
   plug PlugForwardedPeer
 end
 ```
+## With Phoenix
+
+```elixir
+defmodule MyAppWeb.Endpoint do
+
+  # ... lots of code
+
+  plug PlugForwardedPeer # <- Insert before Router to have it cover all pipelines
+  plug MyAppWeb.Router
+end
+```
