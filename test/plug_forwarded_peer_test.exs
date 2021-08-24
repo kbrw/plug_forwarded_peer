@@ -9,7 +9,7 @@ defmodule PlugForwardedPeerTest do
   end
 
   test "no header keeps peer ip" do
-    assert test_conn == {127,0,0,1}
+    assert test_conn() == {127,0,0,1}
   end
 
   test "override client-ip with x-forwarded-for" do
