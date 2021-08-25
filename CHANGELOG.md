@@ -5,7 +5,7 @@
 ### Changed
 
 * Breaking : changed plug dependency version requirement to ~> 1.0, this moved the locked version through a major update
-* [@AndrewDryga](https://github.com/AndrewDryga) helped bringing the lib up to date with Elixir regading compiler warning, mainly `String`'s API update. (Breaking for `elixir < 1.3`)
+* [@AndrewDryga](https://github.com/AndrewDryga) helped bringing the lib up to date with Elixir regarding compiler warnings, mainly `String`'s API update. (Breaking for `elixir < 1.3`)
 
 ### Added
 
