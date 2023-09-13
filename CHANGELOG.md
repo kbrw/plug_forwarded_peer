@@ -10,11 +10,9 @@
 * Readme improvement from [@iloveitaly](https://github.com/iloveitaly).
 * Updated to clean `Mix.Config` deprecation from [@andreicek](https://github.com/andreicek) and [@iloveitaly](https://github.com/iloveitaly).
 
-
 ### Added
 
 * This changelog
-
 
 ## [0.0.2] (2015-09-10)
 
