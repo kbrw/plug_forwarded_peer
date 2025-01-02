@@ -22,10 +22,12 @@ defmodule PlugForwardedPeer do
     end
   end
   def clean_ip(maybe_quoted_ip) do
-    maybe_ip = maybe_quoted_ip |> String.trim("\"") |> String.trim_trailing("]") |> String.trim_leading("[")
-    case :inet_parse.address('#{maybe_ip}') do
-      {:ok,ip}->ip
-      _->nil
+    if String.valid?(maybe_quoted_ip) do
+      maybe_ip = maybe_quoted_ip |> String.trim("\"") |> String.trim_trailing("]") |> String.trim_leading("[")
+      case :inet_parse.address('#{maybe_ip}') do
+        {:ok,ip}->ip
+        _->nil
+      end
     end
   end
 end

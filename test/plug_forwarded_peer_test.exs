@@ -2,7 +2,7 @@ defmodule PlugForwardedPeerTest do
   use ExUnit.Case
   use Plug.Test
 
-  defp test_conn(header \\ nil,value \\ nil) do 
+  defp test_conn(header \\ nil,value \\ nil) do
     c = %{conn("GET","/")| remote_ip: {127,0,0,1}}
     c = if header, do: put_req_header(c,header,value), else: c
     PlugForwardedPeer.call(c,[]).remote_ip
@@ -21,9 +21,10 @@ defmodule PlugForwardedPeerTest do
   test "override client-ip with forwarded for:" do
     assert test_conn("forwarded",~s/host=toto, for="[::1]", for="127.1.1.1"/) == {0,0,0,0,0,0,0,1}
   end
-  
+
   test "override client-ip with wrong ip keeps peer ip" do
     assert test_conn("x-forwarded-for","errornous header") == {127,0,0,1}
     assert test_conn("forwarded",~s/host=toto, for="[:1]", for="256.1.1.1"/) == {127,0,0,1}
+    assert test_conn("x-forwarded-for", <<192, 167, 192, 162, 37, 50, 53, 50, 55, 37, 50, 53, 50, 50>>) == {127,0,0,1}
   end
 end
