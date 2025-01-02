@@ -28,6 +28,8 @@ defmodule PlugForwardedPeer do
         {:ok,ip}->ip
         _->nil
       end
+    else
+      nil
     end
   end
 end
