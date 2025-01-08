@@ -11,7 +11,7 @@ Add to your list of dependencies in mix.exs:
 ```
 def deps do
   [
-    {:plug_forwarded_peer, "~> 0.1.0"}
+    {:plug_forwarded_peer, "~> 0.2.0"}
   ]
 end
 ```

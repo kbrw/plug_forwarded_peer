@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0] (2025-01-08)
+
+### Changed
+
+* Fix an issue where non UTF-8 encoded header values would raise. These are now ignored thanks to
+[@michal-steady](https://github.com/michal-steady) ([#7](https://github.com/kbrw/plug_forwarded_peer/pull/7))
+
 ## [0.1.0] (2023-09-13)
 
 ### Changed
@@ -32,8 +39,9 @@ Initial version
 
 Changelog format inspired by [keep-a-changelog](https://github.com/olivierlacan/keep-a-changelog)
 
-[unreleased]: https://github.com/kbrw/plug_forwarded_peer/compare/v0.0.2...HEAD
+[unreleased]: https://github.com/kbrw/plug_forwarded_peer/compare/v0.2.0...HEAD
 
+[0.2.0]: https://github.com/kbrw/plug_forwarded_peer/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/kbrw/plug_forwarded_peer/compare/v0.0.2...v0.1.0
 [0.0.2]: https://github.com/kbrw/plug_forwarded_peer/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/kbrw/plug_forwarded_peer/compare/99b114c...v0.0.1
